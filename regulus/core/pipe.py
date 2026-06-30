@@ -192,20 +192,18 @@ def pipe3(values: Any, /, *fns: Any) -> Any:
 
 
 @overload
-def starpipe(args: tuple[Unpack[_P]], fn1: Callable[[Unpack[_P]], _B], /) -> _B: ...
+def starpipe(args: tuple[*_P], fn1: Callable[[Unpack[_P]], _B], /) -> _B: ...
+
+
+@overload
+def starpipe(args: tuple[*_P], fn1: Callable[[Unpack[_P]], tuple[*_Q]], fn2: Callable[[*_Q], _B], /) -> _B: ...
 
 
 @overload
 def starpipe(
-    args: tuple[Unpack[_P]], fn1: Callable[[Unpack[_P]], tuple[Unpack[_Q]]], fn2: Callable[[*_Q], _B], /
-) -> _B: ...
-
-
-@overload
-def starpipe(
-    args: tuple[Unpack[_P]],
-    fn1: Callable[[Unpack[_P]], tuple[Unpack[_Q]]],
-    fn2: Callable[[Unpack[_Q]], tuple[Unpack[_X]]],
+    args: tuple[*_P],
+    fn1: Callable[[Unpack[_P]], tuple[*_Q]],
+    fn2: Callable[[Unpack[_Q]], tuple[*_X]],
     fn3: Callable[[Unpack[_X]], _B],
     /,
 ) -> _B: ...
@@ -213,10 +211,10 @@ def starpipe(
 
 @overload
 def starpipe(
-    args: tuple[Unpack[_P]],
-    fn1: Callable[[Unpack[_P]], tuple[Unpack[_Q]]],
-    fn2: Callable[[Unpack[_Q]], tuple[Unpack[_X]]],
-    fn3: Callable[[Unpack[_X]], tuple[Unpack[_Y]]],
+    args: tuple[*_P],
+    fn1: Callable[[Unpack[_P]], tuple[*_Q]],
+    fn2: Callable[[Unpack[_Q]], tuple[*_X]],
+    fn3: Callable[[Unpack[_X]], tuple[*_Y]],
     fn4: Callable[[Unpack[_Y]], _B],
     /,
 ) -> _B: ...
@@ -224,11 +222,11 @@ def starpipe(
 
 @overload
 def starpipe(
-    args: tuple[Unpack[_P]],
-    fn1: Callable[[Unpack[_P]], tuple[Unpack[_Q]]],
-    fn2: Callable[[Unpack[_Q]], tuple[Unpack[_X]]],
-    fn3: Callable[[Unpack[_X]], tuple[Unpack[_Y]]],
-    fn4: Callable[[Unpack[_Y]], tuple[Unpack[_Z]]],
+    args: tuple[*_P],
+    fn1: Callable[[Unpack[_P]], tuple[*_Q]],
+    fn2: Callable[[Unpack[_Q]], tuple[*_X]],
+    fn3: Callable[[Unpack[_X]], tuple[*_Y]],
+    fn4: Callable[[Unpack[_Y]], tuple[*_Z]],
     fn5: Callable[[Unpack[_Z]], _B],
     /,
 ) -> _B: ...
@@ -236,12 +234,12 @@ def starpipe(
 
 @overload
 def starpipe(
-    args: tuple[Unpack[_P]],
-    fn1: Callable[[Unpack[_P]], tuple[Unpack[_Q]]],
-    fn2: Callable[[Unpack[_Q]], tuple[Unpack[_X]]],
-    fn3: Callable[[Unpack[_X]], tuple[Unpack[_Y]]],
-    fn4: Callable[[Unpack[_Y]], tuple[Unpack[_Z]]],
-    fn5: Callable[[Unpack[_Z]], tuple[Unpack[_K]]],
+    args: tuple[*_P],
+    fn1: Callable[[Unpack[_P]], tuple[*_Q]],
+    fn2: Callable[[Unpack[_Q]], tuple[*_X]],
+    fn3: Callable[[Unpack[_X]], tuple[*_Y]],
+    fn4: Callable[[Unpack[_Y]], tuple[*_Z]],
+    fn5: Callable[[Unpack[_Z]], tuple[*_K]],
     fn6: Callable[[Unpack[_K]], _B],
     /,
 ) -> _B: ...
