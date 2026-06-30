@@ -1,6 +1,6 @@
 [project]
 name = "gf-regulus"
-version = "0.1.0"
+version = "1.0.0"
 description = "Practical functional programming for Python - the pure functional core of goforge's Python wing. A hard fork of dbrattli/Expression."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -8,7 +8,7 @@ license = { file = "LICENSE" }
 authors = [{ name = "brain-fuel" }]
 keywords = ["functional", "option", "result", "pipe", "monad", "fp"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
