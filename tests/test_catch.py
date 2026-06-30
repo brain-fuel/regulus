@@ -3,8 +3,8 @@ from typing import Any
 
 import pytest
 
-from expression import Error, Ok, Result, effect
-from expression.extra.result import catch
+from regulus import Error, Ok, Result, effect
+from regulus.extra.result import catch
 
 
 def test_catch_wraps_ok():

@@ -3,8 +3,8 @@ from collections.abc import Callable, ItemsView, Iterable
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression import Some, pipe
-from expression.collections import Block, Map, map
+from regulus import Some, pipe
+from regulus.collections import Block, Map, map
 
 
 def test_map_empty():

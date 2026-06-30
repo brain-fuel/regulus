@@ -8,8 +8,8 @@ from hypothesis import strategies as st
 from pydantic import BaseModel, Field, GetCoreSchemaHandler
 from pydantic_core import CoreSchema, core_schema
 
-from expression import Nothing, Option, Some, pipe
-from expression.collections import Block, block
+from regulus import Nothing, Option, Some, pipe
+from regulus.collections import Block, block
 
 Func = Callable[[int], int]
 

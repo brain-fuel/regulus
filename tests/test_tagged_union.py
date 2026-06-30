@@ -5,7 +5,7 @@ from typing import Generic, Literal, TypeVar
 
 import pytest
 
-from expression import case, tag, tagged_union
+from regulus import case, tag, tagged_union
 
 _T = TypeVar("_T")
 

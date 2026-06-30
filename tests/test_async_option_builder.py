@@ -7,7 +7,7 @@ from typing import List
 import pytest
 from pytest import raises
 
-from expression import effect, Some, Nothing, Option
+from regulus import effect, Some, Nothing, Option
 from tests.utils import CustomException
 
 

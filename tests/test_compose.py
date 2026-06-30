@@ -3,7 +3,7 @@ from collections.abc import Callable
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression import compose, identity
+from regulus import compose, identity
 
 
 Func = Callable[[int], int]

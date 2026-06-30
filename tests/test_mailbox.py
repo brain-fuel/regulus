@@ -4,7 +4,7 @@ from collections.abc import Callable
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression import AsyncReplyChannel, MailboxProcessor
+from regulus import AsyncReplyChannel, MailboxProcessor
 
 
 @given(st.lists(st.integers()))  # type: ignore

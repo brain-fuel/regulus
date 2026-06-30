@@ -1,11 +1,11 @@
 import pytest
 
-from expression.system import (
+from regulus.system import (
     CancellationToken,
     CancellationTokenSource,
     ObjectDisposedException,
 )
-from expression.system.disposable import Disposable
+from regulus.system.disposable import Disposable
 
 
 def test_token_none_works():

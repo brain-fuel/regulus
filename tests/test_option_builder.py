@@ -5,8 +5,8 @@ from typing import List
 
 from pytest import raises
 
-from expression import effect, Some, Nothing, Option
-from expression.core.option import Option
+from regulus import effect, Some, Nothing, Option
+from regulus.core.option import Option
 from tests.utils import CustomException
 
 

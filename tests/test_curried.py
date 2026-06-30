@@ -2,7 +2,7 @@ from collections.abc import Callable
 
 import pytest
 
-from expression import curry, curry_flip, pipe
+from regulus import curry, curry_flip, pipe
 
 
 def test_curry_identity():

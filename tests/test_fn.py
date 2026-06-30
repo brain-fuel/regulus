@@ -1,7 +1,7 @@
 # flake8: noqa
 from typing import Any
 
-from expression import TailCall, tailrec
+from regulus import TailCall, tailrec
 
 
 def test_factorial():

@@ -4,8 +4,8 @@ from typing import List, Any
 
 from pytest import raises
 
-from expression import effect
-from expression.collections.seq import Seq
+from regulus import effect
+from regulus.collections.seq import Seq
 from tests.utils import CustomException
 
 

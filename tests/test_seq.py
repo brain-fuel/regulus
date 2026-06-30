@@ -7,8 +7,8 @@ import pytest
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression import Nothing, Option, Some, effect, option, pipe
-from expression.collections import Seq, seq
+from regulus import Nothing, Option, Some, effect, option, pipe
+from regulus.collections import Seq, seq
 
 
 def test_seq_empty():

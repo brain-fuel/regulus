@@ -6,7 +6,7 @@ from hypothesis import strategies as st
 from pydantic import BaseModel, Field, GetCoreSchemaHandler
 from pydantic_core import CoreSchema, core_schema
 
-from expression import (
+from regulus import (
     Error,
     Nothing,
     Ok,
@@ -17,8 +17,8 @@ from expression import (
     pipe,
     pipe2,
 )
-from expression.core.option import Nothing, Option, Some
-from expression.extra.option import pipeline
+from regulus.core.option import Nothing, Option, Some
+from regulus.extra.option import pipeline
 
 
 def test_option_some():

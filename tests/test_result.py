@@ -7,9 +7,9 @@ from hypothesis import strategies as st
 from pydantic import BaseModel, TypeAdapter, Field, GetCoreSchemaHandler
 from pydantic_core import CoreSchema, core_schema
 
-from expression import Error, Nothing, Ok, Option, Result, Some, result
-from expression.collections import Block
-from expression.extra.result import pipeline, sequence
+from regulus import Error, Nothing, Ok, Option, Result, Some, result
+from regulus.collections import Block
+from regulus.extra.result import pipeline, sequence
 
 from .utils import CustomException
 

@@ -6,8 +6,8 @@ import pytest
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression import Nothing, Option, Some, pipe
-from expression.collections import TypedArray, array
+from regulus import Nothing, Option, Some, pipe
+from regulus.collections import TypedArray, array
 
 
 Func = Callable[[int], int]

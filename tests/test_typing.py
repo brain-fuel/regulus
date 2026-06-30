@@ -2,7 +2,7 @@ from typing import Any, cast
 
 import pytest
 
-from expression import downcast, try_downcast, upcast
+from regulus import downcast, try_downcast, upcast
 
 
 class Base:

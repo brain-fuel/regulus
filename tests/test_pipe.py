@@ -4,8 +4,8 @@ from typing import TypeVar
 from hypothesis import given
 from hypothesis import strategies as st
 
-from expression import pipe, pipe2
-from expression.core.pipe import starpipe, starid
+from regulus import pipe, pipe2
+from regulus.core.pipe import starpipe, starid
 
 _A = TypeVar("_A")
 _B = TypeVar("_B")

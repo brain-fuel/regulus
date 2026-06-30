@@ -4,9 +4,9 @@ import string
 from dataclasses import dataclass
 from typing import Any, Literal
 
-from expression import Option, Result, case, pipe, tag, tagged_union
-from expression.collections import Block
-from expression.extra.parser import (
+from regulus import Option, Result, case, pipe, tag, tagged_union
+from regulus.collections import Block
+from regulus.extra.parser import (
     Parser,
     and_then,
     any_of,

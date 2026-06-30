@@ -4,7 +4,7 @@ import pytest
 from hypothesis import given  # type: ignore
 from hypothesis import strategies as st
 
-from expression.collections.asyncseq import AsyncSeq
+from regulus.collections.asyncseq import AsyncSeq
 
 
 @pytest.mark.asyncio
