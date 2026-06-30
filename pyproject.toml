@@ -1,0 +1,66 @@
+[project]
+name = "gf-regulus"
+version = "0.1.0"
+description = "Practical functional programming for Python — the pure functional core of goforge's Python wing. A hard fork of dbrattli/Expression."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "brain-fuel" }]
+keywords = ["functional", "option", "result", "pipe", "monad", "fp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["typing-extensions>=4.6.0"]
+
+[project.urls]
+Homepage = "https://goforge.dev/python/regulus"
+Repository = "https://github.com/brain-fuel/regulus"
+
+[project.optional-dependencies]
+pydantic = ["pydantic>=2.6.2"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.25.0",
+    "hypothesis>=6.54.2",
+    "ruff>=0.9.0",
+    "mypy>=1.13.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["regulus"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["tests", "docs"]
+lint.ignore = ["D100", "D101", "D102", "D103", "D105", "D107"]
+lint.select = ["D", "E", "W", "F", "I", "T", "RUF", "TID", "UP"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+known-third-party = ["pytest"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["regulus"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "strict"
