@@ -1,6 +1,6 @@
 [project]
 name = "gf-regulus"
-version = "1.0.0"
+dynamic = ["version"]
 description = "Practical functional programming for Python - the pure functional core of goforge's Python wing. A hard fork of dbrattli/Expression."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -38,6 +38,9 @@ dev = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "regulus/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["regulus"]
