@@ -1,0 +1,8 @@
+regulus
+Copyright (c) 2026 brain-fuel
+
+This product is a hard fork of Expression
+(https://github.com/dbrattli/Expression), Copyright (c) Dag Brattli and
+contributors, licensed under the MIT License. The original MIT license text
+is retained in the LICENSE file. regulus renames the `expression` import
+namespace to `regulus` and is maintained independently of upstream.
